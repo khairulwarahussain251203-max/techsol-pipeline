@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:3000"
+    env_file:
+      - .env
+  pipeline-db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=Changezi@123
