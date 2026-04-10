@@ -2,8 +2,8 @@ services:
   web:
     build: .
     ports:
-      - "80:3000"
-    # DELETE OR COMMENT OUT THE env_file: - .env LINE HERE
+      - "80:8080"
+    restart: always
   pipeline-db:
     image: postgres:15
     ports:
